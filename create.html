@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Path</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create Path</h1>
+    <form id="uploadForm">
+      <label for="textData">Enter text:</label>
+      <textarea id="textData" rows="4" cols="50"></textarea>
+      <button type="button" onclick="addTextData()">Add Text</button>
+
+      <label for="photo">Upload photos:</label>
+      <input type="file" id="photo" accept="image/*">
+      <button type="button" onclick="uploadFile('photo')">Add Photo</button>
+
+      <label for="video">Upload videos:</label>
+      <input type="file" id="video" accept="video/*">
+      <button type="button" onclick="uploadFile('video')">Add Video</button>
+
+      <label for="zipFile">Upload zip files, PDFs, EXEs, and others:</label>
+      <input type="file" id="zipFile" accept=".zip,.pdf,.exe,.rar,.tar,.gz,.7z,.txt,.docx,.xlsx,.pptx,.mp3">
+      <button type="button" onclick="uploadFile('zipFile')">Add File</button>
+    </form>
+
+    <div id="uploadedItems"></div>
+
+    <button onclick="generateLink()">Generate Link</button>
+    <div id="linkContainer"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
